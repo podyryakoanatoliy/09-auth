@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
-import { fetchNotes } from "@/lib/api";
+import { fetchNotes } from "@/lib/api/clientApi";
 // import { BallTriangle } from "react-loader-spinner";
 // import Alert from "@mui/material/Alert";
 import css from "./NotesPage.module.css";
@@ -46,6 +46,7 @@ export default function NotesClient({ tag }: NotesClientProps) {
   if (isLoading) return <p>Loading...</p>;
 
   if (error || !data) return <p>Some error..</p>;
+  console.log(data);
   return (
     <div className={css.app}>
       <header className={css.toolbar}>

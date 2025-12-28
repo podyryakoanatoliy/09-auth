@@ -1,14 +1,14 @@
 "use client";
 
 import css from "./NoteForm.module.css";
-import { createNote } from "@/lib/api";
+import { createNote } from "@/lib/api/clientApi";
 import { useId } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 
 import { useNoteStore } from "@/lib/store/noteStore";
 
-import type { FormValues } from "@/lib/api";
+import type { FormValues } from "@/types/note";
 
 // import { Formik, Form, Field, ErrorMessage } from "formik";
 // import * as Yup from "yup";

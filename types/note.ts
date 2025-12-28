@@ -6,3 +6,13 @@ export type Note = {
   updatedAt: string;
   tag: string;
 };
+
+export interface NoteListResponse {
+  notes: Note[];
+  totalPages: number;
+}
+export type FormValues = {
+  title: string;
+  content: string;
+  tag: string;
+};
